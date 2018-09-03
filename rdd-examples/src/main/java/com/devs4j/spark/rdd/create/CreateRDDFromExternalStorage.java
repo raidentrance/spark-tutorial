@@ -13,7 +13,7 @@ import org.apache.spark.api.java.JavaSparkContext;
  */
 public class CreateRDDFromExternalStorage {
 	public static void main(String[] args) {
-		JavaSparkContext sc = new JavaSparkContext(new SparkConf().setAppName("WordCount").setMaster("local[3]"));
+		JavaSparkContext sc = new JavaSparkContext(new SparkConf().setAppName("CreateRDDFromExternalStorage").setMaster("local[3]"));
 		JavaRDD<String> rdd = sc.textFile("src/main/resources/words.txt");
 		// Use your RDD here
 		System.out.println(rdd);

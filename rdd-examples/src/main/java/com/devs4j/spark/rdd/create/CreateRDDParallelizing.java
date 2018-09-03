@@ -16,7 +16,7 @@ import org.apache.spark.api.java.JavaSparkContext;
  */
 public class CreateRDDParallelizing {
 	public static void main(String[] args) {
-		JavaSparkContext sc = new JavaSparkContext(new SparkConf().setAppName("WordCount").setMaster("local[3]"));
+		JavaSparkContext sc = new JavaSparkContext(new SparkConf().setAppName("CreateRDDParallelizing").setMaster("local[3]"));
 
 		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
 		JavaRDD<Integer> rdd = sc.parallelize(list);
